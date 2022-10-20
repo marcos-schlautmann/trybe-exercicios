@@ -1,8 +1,8 @@
 /* Programa retorna maior numero  */
 
-let num1 = 8;
-let num2 = 16;
-let num3 = 15;
+let num1 = -60;
+let num2 = 60;
+let num3 = 90;
 
 // if (num1 > num2) {
 //     console.log(num1);
@@ -36,3 +36,13 @@ let num3 = 15;
 // }
 
 /* Programa retorna angulos do triângulo */
+
+if (num1 + num2 + num3 == 180) {
+    console.log('A soma dos 3 ângulos é : ' + true);
+}
+else if (num1 + num2 + num3 > 180) {
+    console.log('A soma dos 3 ângulos é :' + false);
+}
+else if (num1 || num2 || num3 < 0) {
+    console.log('O ângulo digitado é inválido !');
+}
