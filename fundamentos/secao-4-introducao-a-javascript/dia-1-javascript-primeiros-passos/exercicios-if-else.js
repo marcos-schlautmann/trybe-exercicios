@@ -37,12 +37,30 @@ let num3 = 90;
 
 /* Programa retorna angulos do triângulo */
 
-if (num1 + num2 + num3 == 180) {
-    console.log('A soma dos 3 ângulos é : ' + true);
-}
-else if (num1 + num2 + num3 > 180) {
-    console.log('A soma dos 3 ângulos é :' + false);
-}
-else if (num1 || num2 || num3 < 0) {
-    console.log('O ângulo digitado é inválido !');
+// if (num1 + num2 + num3 == 180) {
+//     console.log('A soma dos 3 ângulos é : ' + true);
+// }
+// else if (num1 + num2 + num3 > 180) {
+//     console.log('A soma dos 3 ângulos é :' + false);
+// }
+// else if (num1 || num2 || num3 < 0) {
+//     console.log('O ângulo digitado é inválido !');
+// }
+
+let pecasDeXadrez = 'queen';
+
+switch (pecasDeXadrez) {
+    case 'king':
+        console.log('King => 1 square horizontal, 1 square vertical, 1 square diagonal !');
+        break;
+
+case 'queen':
+    console.log
+
+
+
+
+
+
+
 }
