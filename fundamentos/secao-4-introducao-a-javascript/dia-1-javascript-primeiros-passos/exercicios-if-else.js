@@ -48,14 +48,15 @@ let num3 = 90;
 // }
 
 let pecasDeXadrez = 'queen';
-
+/* king, queen, rook, bishop, knight, pawn */
 switch (pecasDeXadrez) {
     case 'king':
-        console.log('King => 1 square horizontal, 1 square vertical, 1 square diagonal !');
+        console.log('King => horizontal, vertical, diagonal !');
         break;
-
-case 'queen':
-    console.log
+    case 'queen':
+        console.log('Queen => horizontal, vertical, diagonal !');
+        break;
+    case :
 
 
 
