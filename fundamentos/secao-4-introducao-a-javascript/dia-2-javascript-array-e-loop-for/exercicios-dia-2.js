@@ -90,12 +90,12 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 // Cria um array de 1 a 25 e imprime os valores
 
-let rangeDeNumeros = [];
+// let rangeDeNumeros = [];
 
-for (let i = 1; i <= 25; i += 1) {
-    rangeDeNumeros.push(i);
-}
-console.log(rangeDeNumeros); 
+// for (let i = 1; i <= 25; i += 1) {
+//     rangeDeNumeros.push(i);
+// }
+// console.log(rangeDeNumeros); 
 
 
 // Imprime a divisao de cada numero do array por 2
