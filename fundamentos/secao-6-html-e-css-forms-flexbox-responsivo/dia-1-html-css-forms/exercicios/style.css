@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-.formulario {
+/* .formulario {
     background-color: #c7c4c4;
     border: 3px solid black;
     width: 80%;
@@ -10,16 +10,17 @@
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
-#textarea-resposta {
+*/ #textarea-resposta {
     resize: none;
 }
 
 #botao-enviar {
-    margin-left: 65px;
+    margin-left: 10px;
     border-radius: 5px;
     width: 100px;
+    margin-top: 20px;
 }
 
 #botao-apagar {
