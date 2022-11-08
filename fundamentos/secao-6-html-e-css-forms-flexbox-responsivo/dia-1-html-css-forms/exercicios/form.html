@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrybeTrip</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>TrybeTrip</h1>
-
-    <form action="" method="get">
+    <header id="cabecalho">
+        <h1>TrybeTrip</h1>
+    </header>
+    <form action="" method="get" class="formulario">
         <label for="nome-usuario">Nome:
             <input type="text" name="nomr" id="nome-usuario" placeholder="Digite seu nome completo" required min="10"
                 max="40">
@@ -35,14 +37,28 @@
             <input type="radio" id="destino-4" name="destino" value="montanhas">Montanhas
         </label>
         <br><br>
-        <p>Digite aqui sua resposta !</p>
-        <textarea name="resposta-concurso" id="textarea-resposta" cols="30" rows="10"></textarea>
+        <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
+        <p>Digite aqui sua resposta!</p>
+        <textarea name="resposta-concurso" id="textarea-resposta" cols="30" rows="10" maxlength="500"></textarea>
         <br><br>
-
-
-
-
+        <label for="data-viagem">Data:
+            <input type="date" id="data-viagem" name="data" placeholder="dd/mm/aaaa">
+        </label>
+        <br><br>
+        <label for="checkbox-concordo-1">
+            <input type="checkbox" name="concordo-1" id="checkbox-concordo-1">Gostaria de receber outras incríveis
+            oportunidades oferecidas pela Trybe?
+        </label>
+        <br>
+        <label for="checkbox-concordo-2">
+            <input type="checkbox" name="concordo-2" id="checkbox-concordo-2">Concordo que imagens das minhas férias
+            poderão ser usadas na divulgação de concursos futuros.
+        </label>
+        <br><br>
     </form>
+    <button type="submit" id="botao-enviar">Enviar</button>
+    <button type="submit" id="botao-apagar">Apagar</button>
+    <script src="script.js"></script>
 </body>
 
 </html>

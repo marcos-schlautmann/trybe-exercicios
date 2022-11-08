@@ -1,0 +1,28 @@
+#cabecalho {
+    text-align: center;
+}
+
+.formulario {
+    background-color: #c7c4c4;
+    border: 3px solid black;
+    width: 80%;
+    margin-bottom: 15px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#textarea-resposta {
+    resize: none;
+}
+
+#botao-enviar {
+    margin-left: 65px;
+    border-radius: 5px;
+    width: 100px;
+}
+
+#botao-apagar {
+    border-radius: 5px;
+    width: 100px;
+}
