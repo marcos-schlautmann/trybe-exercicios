@@ -16,13 +16,13 @@
     <form action="" method="get" class="formulario">
         <fieldset>
             <label for="nome-usuario">Nome:
-                <input type="text" name="nomr" id="nome-usuario" placeholder="Digite seu nome completo" required
-                    min="10" max="40">
+                <input type="text" name="nome" id="nomeUsuario" placeholder="Digite seu nome completo" required
+                    minlength="10" maxlength="40">
             </label>
             <br><br>
             <label for="email-usuario">Email:
-                <input type="email" name="email" id="email-usuario" placeholder="Digite seu email" required min="10"
-                    max="50">
+                <input type="email" name="email" id="emailUsuario" placeholder="Digite seu email" required minlength="10"
+                    maxlength="50">
             </label>
             <br><br>
             <label for="destino-1">
@@ -40,7 +40,7 @@
             <br><br>
             <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
             <p>Digite aqui sua resposta!</p>
-            <textarea name="resposta-concurso" id="textarea-resposta" cols="30" rows="10" maxlength="500"></textarea>
+            <textarea name="resposta-concurso" id="textareaResposta" cols="30" rows="10" maxlength="500"></textarea>
             <br><br>
             <label for="data-viagem">Data:
                 <input type="date" id="data-viagem" name="data" placeholder="dd/mm/aaaa">
@@ -52,13 +52,13 @@
             </label>
             <br>
             <label for="checkbox-concordo-2">
-                <input type="checkbox" name="concordo-2" id="checkbox-concordo-2">Concordo que imagens das minhas férias
+                <input type="checkbox" name="concordo-2" id="checkboxConcordo-2">Concordo que imagens das minhas férias
                 poderão ser usadas na divulgação de concursos futuros.
             </label>
             <br><br>
         </fieldset>
-        <button type="submit" id="botao-enviar">Enviar</button>
-        <button type="submit" id="botao-apagar">Apagar</button>
+        <button type="submit" id="botaoEnviar">Enviar</button>
+        <button type="submit" id="botaoApagar">Apagar</button>
     </form>
     <script src="script.js"></script>
 </body>

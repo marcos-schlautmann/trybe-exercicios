@@ -12,18 +12,18 @@
     margin-right: auto;
 } */
 
-*/ #textarea-resposta {
+*/ #textareaResposta {
     resize: none;
 }
 
-#botao-enviar {
+#botaoEnviar {
     margin-left: 10px;
     border-radius: 5px;
     width: 100px;
     margin-top: 20px;
 }
 
-#botao-apagar {
+#botaoApagar {
     border-radius: 5px;
     width: 100px;
 }
