@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrybeTrip</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap-5.2.2-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header id="cabecalho">
+        <h1 class="display-4 text-muted">TrybeTrip</h1>
+    </header>
+    <form action="" method="get" class="formulario">
+        <fieldset>
+            <div class="form-group"> 
+                <label for="nome-usuario">Nome:
+                    <input class="form-control" type="text" name="nome" id="nomeUsuario" placeholder="Digite seu nome completo" required
+                        minlength="10" maxlength="40">
+                </label>
+            </div> 
+            <br>
+            <div class="form-group"> 
+                <label for="email-usuario">Email:
+                    <input class="form-control" type="email" name="email" id="emailUsuario" placeholder="Digite seu email" required
+                        minlength="10" maxlength="50">
+                </label>
+            </div> 
+            <br>
+            <div class="form-group"> 
+                <label for="destino-1">
+                    <input type="radio" id="destino-1" name="destino" value="cidade">Cidade
+                </label>
+
+                <label for="destino-2">
+                    <input type="radio" id="destino-2" name="destino" value="campo">Campo
+                </label>
+
+                <label for="destino-3">
+                    <input  type="radio" id="destino-3" name="destino" value="praia">Praia
+                </label>
+
+                <label for="destino-4">
+                    <input  type="radio" id="destino-4" name="destino" value="montanhas">Montanhas
+                </label>
+            </div> 
+            <br>
+            <div class="form-group"> 
+                <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
+                <p>Digite aqui sua resposta!</p>
+                <textarea class="form-control" name="resposta-concurso" id="textareaResposta" cols="30" rows="10" maxlength="500"></textarea>
+                <br><br>
+            </div> 
+            <div class="form-group"> 
+                <label for="data-viagem">Data:
+                    <input  type="date" id="data-viagem" name="data" placeholder="dd/mm/aaaa">
+                </label>
+                <br><br>
+            </div> 
+            <div class="form-group"> 
+                <label for="checkbox-concordo-1">
+                    <input type="checkbox" name="concordo-1" id="checkbox-concordo-1">Gostaria de receber outras
+                    incríveis
+                    oportunidades oferecidas pela Trybe?
+                </label>
+            </div> 
+            <br>
+            <div class="form-group"> 
+                <label for="checkbox-concordo-2">
+                    <input type="checkbox" name="concordo-2" id="checkboxConcordo-2">Concordo que imagens das minhas
+                    férias
+                    poderão ser usadas na divulgação de concursos futuros.
+                </label>
+            </div> 
+            <br><br>
+        </fieldset>
+        <button type="submit" class="btn btn-sucess" id="botaoEnviar">Enviar</button>
+        <button type="submit" class="btn btn-sucess" id="botaoApagar">Apagar</button>
+    </form>
+    <script src="bootstrap/bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
