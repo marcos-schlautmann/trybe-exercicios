@@ -12,26 +12,31 @@ describe('a função createItem', () => {
         const actual = createItem('banana', 'kg', 1.99, 20);
         expect(actual).toEqual(expected);
     });
-
     it('utiliza zero como quantidade padrão', () => {
         const expected = 0;
         const actual = createItem('banana', 'kg', 1.99,);
         expect(actual).toHaveProperty('quantity', expected);
     });
-
     it('Lança um erro quando não recebe parâmetros', () => {
-        expect(createItem()).toThrow();
+        expect(() => createItem()).toThrow();
     });
-
     it('Lança um erro se o nome do item não é uma string', () => {
         const expected = ('O nome do item deve ser uma string');
-        const actual = createItem(1.99, 'kg', 'banana', 20);
-        expect(actual).toThrow(expected);
+        expect(() => createItem(1.99, 'kg', 'banana', 20)).toThrow(expected);
+    });
+    it('Lança um erro se o preço é negativo', () => {
+        const expected = ('O preço do item deve ser maior que zero');
+        expect(() => createItem('banana', 'kg', -0.01, 20)).toThrow(expected);
+    });
+    it('Lança um erro se o preço é negativo', () => {
+        const expected = ('O preço do item deve ser maior que zero');
+        expect(() => createItem('banana', 'kg', 0.00, 20)).toThrow(expected);
     });
 
+    
 
 
 
-    // it.todo('Lança um erro se o preço é negativo');
+
     // it.todo('Lança um erro se o preço é zero');
 });
