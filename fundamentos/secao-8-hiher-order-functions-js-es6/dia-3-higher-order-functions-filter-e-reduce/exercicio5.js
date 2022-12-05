@@ -61,11 +61,28 @@ const books = [
     },
 ];
 
-// filtre os livros com mais de 60 anos desde a sua publicação e ordene a partir do livro mais velho para o mais novo.
+// const expectedResult = [
+//     'O Senhor dos Anéis',
+//     'Fundação',
+//     'O Chamado de Cthulhu',
+//   ];
 
-const oldestBooks = () => {
+const oldBooks = () => {
     const hoje = new Date().getFullYear() - 60
-   
-    return  books.filter((book) => book.releaseYear < hoje).sort((a, b) => (a.releaseYear - b.releaseYear))
+    return books.filter((book) => book.releaseYear < hoje).map((book) => book.name);
+    //     return books.filter((book) => 2022 - book.releaseYear > 60).map((book) => book.name);
 };
-console.log(oldestBooks());
+
+const result = oldBooks();
+
+console.log(result);
+
+
+
+
+
+
+
+
+
+
