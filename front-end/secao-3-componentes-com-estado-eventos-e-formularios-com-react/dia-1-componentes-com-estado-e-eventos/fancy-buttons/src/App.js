@@ -4,44 +4,80 @@ import './App.css';
 class App extends React.Component {
 
   constructor() {
-    super()
-    this.handleClick1 = this.handleClick1.bind(this);
-    this.handleClick2 = this.handleClick2.bind(this);
-    this.handleClick3 = this.handleClick3.bind(this);  
+    super();
+    this.handleButtonOne = this.handleButtonOne.bind(this);
+    this.handleButtonTwo = this.handleButtonTwo.bind(this);
+    this.handleButtonThree = this.handleButtonThree.bind(this);
+
     this.state = {
-      botao1 : 0,
-      botao2 : 0,
-      botao3 : 0,
-    }  
-  }
-
-  handleClick1 () {
-    this.setState((estadoAnteriorDoBotao1, _props) => ({
-      botao1: estadoAnteriorDoBotao1.botao1 + 1
-    }))
+      clicksBtnOne: 0,
+      clicksBtnTwo: 0,
+      clicksBtnThree: 0,
+    };
   }
   
-  handleClick2 () {
-    this.setState((estadoAnteriorDoBotao2, _props) => ({
-      botao2: estadoAnteriorDoBotao2.botao2 + 1
-    }))
-  }
-  
- handleClick3 () {
-    this.setState((estadoAnteriorDoBotao3, _props) => ({
-      botao3: estadoAnteriorDoBotao3.botao3 + 1
-    }))
+  handleButtonOne() {
+    const { clicksBtnOne } = this.state;
+    this.setState((prevState) => ({
+      clicksBtnOne: prevState.clicksBtnOne + 1,
+    }), () => {
+      console.log(`Botão 1 ${this.getButtonColor(clicksBtnOne)}`);
+    });
   }
 
-  render() {
-    return(
-     <div>
-      <button onClick={this.handleClick1}>{this.state.botao1}</button>
-      <button onClick={this.handleClick2}>{this.state.botao2}</button>
-      <button onClick={this.handleClick3}>{this.state.botao3}</button>
-     </div>
-    )
+  handleButtonTwo() {
+    const { clicksBtnTwo } = this.state;
+    this.setState((prevState) => ({
+      clicksBtnTwo: prevState.clicksBtnTwo + 1,
+    }), () => {
+      console.log(`Botão 2 ${this.getButtonColor(clicksBtnTwo)}`);
+    });
   }
+
+  handleButtonThree() {
+    const { clicksBtnThree } = this.state;
+    this.setState((prevState) => ({
+      clicksBtnThree: prevState.clicksBtnThree + 1,
+    }), () => {
+      console.log(`Botão 3 ${this.getButtonColor(clicksBtnThree)}`);
+    });
+  }
+
+  getButtonColor(num) {
+    return num % 2 === 0 ? 'green' : 'white';
+  }
+
+  // ...
+render() {
+  const { clicksBtnOne, clicksBtnTwo, clicksBtnThree } = this.state;
+  return (
+    <div>
+      <button
+        type="button"
+        onClick={ this.handleButtonOne }
+        style={ { backgroundColor: this.getButtonColor(clicksBtnOne) } }
+      >
+        {`Cliques botão 1: ${clicksBtnOne}`}
+      </button>
+      <button
+        type="button"
+        onClick={ this.handleButtonTwo }
+        style={ { backgroundColor: this.getButtonColor(clicksBtnTwo) } }
+      >
+        {`Cliques botão 2: ${clicksBtnTwo}`}
+      </button>
+      <button
+        type="button"
+        onClick={ this.handleButtonThree }
+        style={ { backgroundColor: this.getButtonColor(clicksBtnThree) } }
+      >
+        {`Cliques botão 3: ${clicksBtnThree}`}
+      </button>
+    </div>
+  );
 }
+}
+
+  
 
 export default App;
