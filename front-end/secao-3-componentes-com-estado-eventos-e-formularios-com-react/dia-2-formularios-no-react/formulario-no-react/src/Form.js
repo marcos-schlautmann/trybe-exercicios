@@ -5,17 +5,15 @@ class Form extends Component {
   constructor() {
     super();
 
-    this.handleChange = this.handleChange.bind(this);
-
-    this.state = {
-      estadoFavorito: '',
-    };
+    this.handleChange = this.handleChange.bind(this);   
   }
 
-
-  handleChange(event) {
+  handleChange({ target }) {
+    const { name } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+  
     this.setState({
-      estadoFavorito: event.target.value,
+      [name]: value,
     });
   }
 
@@ -41,8 +39,5 @@ class Form extends Component {
     );
   }
 }
-
-export default Form;
-
 
 export default Form;
