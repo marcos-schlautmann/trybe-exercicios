@@ -2,7 +2,7 @@ import React from 'react';
 import { screen, act } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import renderWithRouter from './renderWithRouter';
-import App from './App';
+import App, { About } from './App';
 
 describe('teste da aplicação toda', () => {
   it('deve renderizar o componente App', () => {
@@ -40,4 +40,11 @@ it('deve testar um caminho não existente e a renderização do Not Found', () =
     { name: 'Página não encontrada' });
   expect(notFoundTitle).toBeInTheDocument();
 });
+  it('deve renderizar o componente About (apenas componente)', () => {
+    renderWithRouter(<About />);
+
+    const aboutTitle = screen.getByRole('heading',
+      { name: 'Você está na página Sobre' });
+    expect(aboutTitle).toBeInTheDocument();
+  });
 });
