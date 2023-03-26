@@ -1,21 +1,38 @@
-import logo from './logo.svg';
+// ./src/App.js
 import './App.css';
+import React from 'react';
+import { connect } from 'react-redux';
+import { thunkCharacter } from './redux/actions';
+import CharacterCard from './components/CharacterCard';
 
-function App() {
-  return (
-    <div className="App">
-      <label htmlFor="input-nome-personagem">
-        Digite o nome completo do personagem
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      character: ''
+    }
+  }
+
+  render() {
+    const { character } = this.state;
+    const { dispatch } = this.props;
+    return (
+      <>
         <input
-        type="text"
-        id="input-nome-personagem"
-        placeholder="Tyrion Lannister"
+          type="text"
+          onChange={({ target }) => this.setState({ character: target.value })}
+          value={character}
         />
-      </label>
-      
-      
-    </div>
-  );
+        <button
+          type="button"
+          onClick={() => dispatch(thunkCharacter(character))}
+        >
+          Search
+        </button>
+        <CharacterCard />
+      </>
+    );
+  }
 }
 
-export default App;
+export default connect()(App);
